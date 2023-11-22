@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Med+</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .box {
+        background-color: rgb(255, 255, 255);
+        width: 330px;
+    }
+
+    fieldset {
+        border: 3px solid #ffffff;
+        height: 649px;
+    }
+
+    #logo {
+        width: 380px;
+        height: 130px;
+        margin-left: 10px;
+    }
+
+
+    #submit {
+        background-color: #93D1FF;
+        border-radius: 40px;
+        border-color: #ffffff;
+        height: 50px;
+        width: 160px;
+        font-family: Mate SC;
+        font-size: larger;
+        margin-left: 100px;
+
+
+    }
+
+
+    #submit:hover {
+        background-color: #93D1FF;
+        box-shadow: 5px 2px #4b93ca;
+        transform: scale(1.1);
+        transition: all 0.5s;
+
+    }
+
+    .crie {
+        text-align: center;
+        color: #93D1FF;
+        margin-top: 139px;
+    }
+
+    #email {
+        background-color: #eceeef;
+        width: 390px;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid #a8a8a9;
+    }
+
+    #senha {
+        background-color: #eceeef;
+        width: 390px;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid #a8a8a9;
+
+    }
+
+    #voltar {
+        margin-left: -50px;
+
+    }
+
+    #nome {
+        background-color: #eceeef;
+        width: 390px;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid #a8a8a9;
+
+
+
+    }
+
+    #cpf {
+        background-color: #eceeef;
+        width: 390px;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid #a8a8a9;
+    }
+
+    .jatem {
+        margin-left: 110px;
+    }
+
+    #data {
+        font-size: 16px;
+    }
+
+    #datanasc {
+        background-color: #eceeef;
+        width: 100px;
+        height: 20px;
+        border: 1px solid #a8a8a9;
+    }
+</style>
+
+<body>
+    <div class="box">
+
+ <form method="POST" action="/register">
+ <img src="images/logo_removebg_preview_1.png" alt="" id="logo">
+          <br>
+          <br>
+        <label for="email">Usuario ou Email:</label>
+        <input type="text" id="email" name="email" required>
+        <br>
+      <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <br>
+        <label for="tipo">Qual seu tipo de conta:</label>
+        <select id="tipo" name="tipo">
+    <option value="Paciente">Paciente</option>
+    <option value="Médico">Médico</option>
+    <option value="Administrador">Administrador</option>
+</select>
+<br>
+        <!-- Outros campos de entrada, se necessário -->
+
+        <input type="submit" value="Cadastrar">
+    </form>
+    </div>
+</body>
+
+</html>

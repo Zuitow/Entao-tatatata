@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Consultas-MedPlus</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <div class="topico">
+            <img src="images/logoespee.png" height="40%" width="300px" button="" id="botlogo" onclick="voltar()">
+
+            <a href="/index.ejs"><button class="botoes">Home</button></a>
+            <a href="/exames.html"><button class="botoes">Exames</button></a>
+            <a href="/consultas.ejs"><button class="botoes">Consultas</button></a>
+            <a href="/cirurgia.html"><button class="botoes">Cirurgias</button></a>
+            <a href="/planos.html"><button class="botoes">Planos</button></a>
+            <img src="images/Login.png" height="80px" width="80px" id="foto2" button="" onclick="login()">
+        </div>
+    </header>
+    <br>
+<t thead>
+ nome :
+</t thead>
+<t body>
+ da
+    <div class="e975_213">
+        <span class="e975_215">CONHEÇA AS NOSSAS UNIDADES</span>
+        <div class="e975_216"></div>
+        <span class="e975_217">DR. Ricardo Emanuel Lombardi - Radiologista |<button class="b1" onclick="abrirSubTela()">Confirmar Consulta</button></span>
+        <div class="e975_218"></div>
+        <div class="e975_219"></div>
+        <div class="e975_220"></div>
+        <div class="e975_221"></div>
+        <div class="e975_222"></div>
+        <div class="e975_223"></div>
+        <div class="e975_224"></div>
+        <span class="e975_225">DR. Antônio Fagundes Da Conceição - Dermatologista |<button class="b1" onclick="abrirSubTela()">Confirmar Consulta</button></span>
+        <span class="e975_226">DR. Francisco Almeida Boulevar - Oftalmologista |<button class="b1" onclick="abrirSubTela()">Confirmar Consulta</button></span>
+        <span class "e975_227">DR. Olávio Augusto Mendes - Cardiologista |<button class="b1" onclick="abrirSubTela()">Confirmar Consulta</button></span>
+        <span class="e975_228">DR. Lucas Eduardo Rosa - Anestesiologista |<button class="b1" onclick="abrirSubTela()">Confirmar Consulta</button></span>
+        <span class="e975_229">DR. Fábio Henrique Novaes - Urologista |<button class="b1" onclick="abrirSubTela()">Confirmar Consulta</button></span>
+        <span class="e975_230">DR. Gilberto Oliveira Fares Da Silva - Ginecologista |<button class="b1" onclick="abrirSubTela()">Confirmar Consulta</button></span>
+        <span class="e975_232">DR. Roberto Oliveira Mantoan - Neurologista |<button class="b1" onclick="abrirSubTela()">Confirmar Consulta</button></span>
+        <span class="e975_240">2° Andar - Sala 06</span>
+        <span class="e975_241">1° Andar - Sala 05</span>
+        <span class="e975_242">2° Andar - Sala 01</span>
+        <span class="e975_243">1° Andar - Sala 06</span>
+        <span class="e975_244">1° Andar - Sala 03</span>
+        <span class="e975_245">1° Andar - Sala 04</span>
+        <span class="e975_246">2° Andar - Sala 02</span>
+        <span class="e975_247">2° Andar - Sala 03</span>
+    </div>
+
+    <form method="POST" action="/marcarConsulta">
+    <div id="subTela">
+<label for="nomepaciente">Insira Seu nome</label>
+<br>
+<input type="text" id="nomepaciente" name="nomepaciente">
+<br>
+        <label for="dataconsulta">Data:</label>
+<br>
+        <input type="date" id="dataconsulta" name="dataconsulta">
+
+      
+<br>
+
+<br>
+<br>
+        <label for="hora">Escolha uma opção:</label>
+        <input type="time" id="hora" name="hora" placeholder="Selecione o Horário">
+<br>
+<br>
+<label for="motivo">Insira o motivo</label>
+<input type="text" id="motivo" name="motivo" placeholder="Motivo">
+
+<br>
+<br>
+<label for="medicos">Escolha uma opção:</label>
+        <select id="medicos" name="nomemedico">
+    <option value="Antônio Fagundes Da Conceição">Antônio Fagundes Da Conceição</option>
+    <option value="Francisco Almeida Boulevar">Francisco Almeida Boulevar</option>
+    <option value="Olávio Augusto Mendes">Olávio Augusto Mendes</option>
+    <option value="Roberto Oliveira Mantoan">Roberto Oliveira Mantoan</option>
+</select>
+<br>
+   <h4>Deseja marcar consulta?</h4>
+<br>
+        <label for="sim">Sim</label>
+        <input type="radio" id="sim" name="resposta" value="sim">
+        <label for="nao">Não</label>
+        <input type="radio" id="nao" name="resposta" value="nao">
+<br>
+<input type="submit" value="Confirmar">
+<br>
+<br>
+       
+ <button type="button" onclick="fecharSubTela()">Voltar</button>
+    </div>
+</form>
+
+
+    <script>
+        function abrirSubTela() {
+            document.getElementById("subTela").style.display = "block";
+        }
+
+        function fecharSubTela() {
+            document.getElementById("subTela").style.display = "none";
+        }
+
+        function verificarResposta() {
+            var resposta = document.querySelector('input[name="resposta"]:checked');
+
+            if (resposta) {
+                if (resposta.value === "sim") {
+                    alert("Consulta confirmada!");
+                    fecharSubTela();
+                } else if (resposta.value === "nao") {
+                    alert("Consulta não confirmada.");
+                    fecharSubTela();
+                }
+            } else {
+                alert("Por favor, selecione 'Sim' ou 'Não'.");
+            }
+        }
+    </script>
+</body>
+<style>
+
+</style>
+
+</html>
